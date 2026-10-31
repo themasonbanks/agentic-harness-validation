@@ -1,5 +1,4 @@
 #!/bin/sh
 set -eu
-printf '%s
-' 'Configure scripts/setup.sh with pinned runtime and frozen dependency installation.' >&2
-exit 1
+command -v sh >/dev/null
+printf "%s\n" "POSIX shell application; no external dependencies to install."

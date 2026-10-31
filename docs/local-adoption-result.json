@@ -1,0 +1,7 @@
+{
+  "configuration_seconds": 0.13,
+  "scope": "dependency-free POSIX shell sample; excludes account setup and hosted CI queue",
+  "initial_check": "pass",
+  "deliberately_wrong_greeting": "fail",
+  "repaired_check": "pass"
+}

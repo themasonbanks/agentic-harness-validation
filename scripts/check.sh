@@ -1,5 +1,7 @@
 #!/bin/sh
 set -eu
-printf '%s
-' 'Configure scripts/check.sh with real format, lint, type, test and build checks.' >&2
-exit 1
+cd "$(dirname "$0")/.."
+for script in scripts/*.sh src/*.sh tests/*.sh; do
+  sh -n "$script"
+done
+sh tests/greet.test.sh
