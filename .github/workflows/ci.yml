@@ -1,0 +1,14 @@
+name: Project CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: project-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    name: Project checks
+    uses: themasonbanks/agentic-platform/.github/workflows/project-checks.yml@85791b3f7e02156e480718756e33b2e28c4a7017
