@@ -4,4 +4,4 @@ if [ "$#" -ne 1 ] || [ -z "$1" ]; then
   printf "%s\n" "Usage: greet.sh NAME" >&2
   exit 2
 fi
-printf "Hello, %s!\n" "$1"
+printf "Wrong, %s!\n" "$1"
